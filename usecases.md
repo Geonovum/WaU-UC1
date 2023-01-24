@@ -21,33 +21,324 @@ gebied,
 -   Onderscheid maken tussen hoofdadres en nevenadres bij beantwoorden vraag van
     gebruiker.
 
--   Opvragen van actueel adres een specifiek invidueel Verblijfsobject,
-    Standplaats of Ligplaats.
+-   Filter op ID: Opvragen van actueel adres van een specifiek invidueel
+    Verblijfsobject, Standplaats of Ligplaats via het ID van de
+    Nummeraanduiding.
 
--   Opvragen van alle actuele adressen in een gebouw, zijnde een Pand.
+-   Filter op attribuut: Opvragen alle actuele adressen met bepaalde straatnaam,
+    postcode, woonplaats.
 
--   Opvragen alle adressen met bepaalde straatnaam, postcode, woonplaats.
+### Buiten scope
 
--   Opvragen van actuele adressen binnen een gebied.
+-   niet-actuele adressen, ofwel historie
+
+-   Filter op PandID: Opvragen van alle actuele adressen in een gebouw, zijnde
+    een Pand.
+
+-   Filter op geometrie: Opvragen van actuele adressen binnen een gebied.
 
 ### Modelleerkeuzes
 
--   T.b.v. vraag “Geef mij het adres van het adresseerbaar object met dit ID.”
-
--   Daarvoor is nodig dat het ID van het adresseerbare object is opgenomen als
-    eigenschap van het Adres. Dit adres hoort bij dit Adresseerbaar object
-    middels ID.
-
--   Idem voor Pand, opnemen id pand als eigenschap van Adres.
-
--   Opnemen typeAdres als eigenschap van Adres voor onderscheid hoofdadres en
+-   Opnemen isHoofdadres als eigenschap van Adres voor onderscheid hoofdadres en
     nevenadres.
 
-### Openstaande vragen
+-   Adresseerbare objecten en Pand vormen geen onderdeel van productmodel.
 
--   Nemen we ook de Adresseerbare objecten + Pand op in model? Is dat nodig, of
-    wordt via BAG service geleverd, en hoeft het niet in dit productmodel.
+-   Herkomst wordt apart van klasse Adres gemodelleerd.
 
-![](media/0381a6549e5c70d89dcb76f47deb2e8e.png)
+JSON voorbeeld
+--------------
 
->   Afbeelding met tekst Automatisch gegenereerde beschrijving
+{
+
+"adres": {
+
+"identificatie": "0307200000456181",
+
+"omschrijving": "Barchman Wuytierslaan 10, 3818LH Amersfoort",
+
+"straat": "Barchman Wuytierslaan",
+
+"huisnummer": "10",
+
+"huisletter": null,
+
+"huisnummertoevoeging": null,
+
+"postcode": "3818LH",
+
+"plaats": "Amersfoort",
+
+"_metadata": {
+
+"herkomst": {
+
+"gegeven.1": {
+
+"naam": "identificatie",
+
+"bron": {
+
+"registratie": "BAG",
+
+"objecttype": "Nummeraanduiding",
+
+"object identificatie": {
+
+"lokaalid": "03070201234567890123456",
+
+"versie": "1",
+
+"tijdstipregistratie": "21-01-2010"
+
+},
+
+"attribuut": "identificatie"
+
+}
+
+},
+
+"gegeven.2": {
+
+"naam": "omschrijving",
+
+"bron.1": {
+
+"registratie": "BAG",
+
+"objecttype": "Nummeraanduiding",
+
+"object identificatie": {
+
+"lokaalid": "0307200000456181",
+
+"versie": "1",
+
+"tijdstipregistratie": "21-01-2010"
+
+},
+
+"attribuut.1": "huisnummer",
+
+"attribuut.2": "huisletter",
+
+"attribuut.3": "huisnummertoevoeging",
+
+"attribuut.4": "postcode"
+
+},
+
+"bron.2": {
+
+"registratie": "BAG",
+
+"objecttype": "OpenbareRuimte",
+
+"object identificatie": {
+
+"lokaalid": "0307200000456181",
+
+"versie": "1",
+
+"tijdstipregistratie": "21-01-2010"
+
+},
+
+"attribuut": "naam"
+
+}
+
+},
+
+"gegeven.3": {
+
+"naam": "straat",
+
+"bron": {
+
+"registratie": "BAG",
+
+"objecttype": "OpenbareRuimte",
+
+"object identificatie": {
+
+"lokaalid": "0307300000306765",
+
+"versie": "1",
+
+"tijdstipregistratie": "21-01-2010"
+
+},
+
+"attribuut": "naam"
+
+}
+
+},
+
+"gegeven.4": {
+
+"naam": "huisnummer",
+
+"bron": {
+
+"registratie": "BAG",
+
+"objecttype": "Nummeraanduiding",
+
+"object identificatie": {
+
+"lokaalid": "0307200000456181",
+
+"versie": "1",
+
+"tijdstipregistratie": "21-01-2010"
+
+},
+
+"attribuut": "huisnummer"
+
+}
+
+},
+
+"gegeven.5": {
+
+"naam": "huisletter",
+
+"bron": {
+
+"registratie": "BAG",
+
+"objecttype": "Nummeraanduiding",
+
+"object identificatie": {
+
+"lokaalid": "0307200000456181",
+
+"versie": "1",
+
+"tijdstipregistratie": "21-01-2010"
+
+},
+
+"attribuut": "huisletter"
+
+}
+
+},
+
+"gegeven.6": {
+
+"naam": "huisnummertoevoeging",
+
+"bron": {
+
+"registratie": "BAG",
+
+"objecttype": "Nummeraanduiding",
+
+"object identificatie": {
+
+"lokaalid": "0307200000456181",
+
+"versie": "1",
+
+"tijdstipregistratie": "21-01-2010"
+
+},
+
+"attribuut": "huisnummertoevoeging"
+
+}
+
+},
+
+"gegeven.7": {
+
+"naam": "postcode",
+
+"bron": {
+
+"registratie": "BAG",
+
+"objecttype": "Nummeraanduiding",
+
+"object identificatie": {
+
+"lokaalid": "0307200000456181",
+
+"versie": "1",
+
+"tijdstipregistratie": "21-01-2010"
+
+},
+
+"attribuut": "postcode"
+
+}
+
+},
+
+"gegeven.8": {
+
+"naam": "plaats",
+
+"bron": {
+
+"registratie": "BAG",
+
+"objecttype": "Woonplaats",
+
+"object identificatie": {
+
+"lokaalid": "1664",
+
+"versie": "4",
+
+"tijdstipregistratie": "24-10-2019"
+
+},
+
+"attribuut": "postcode"
+
+}
+
+},
+
+"gegeven.9": {
+
+"naam": "isHoofdadres",
+
+"bron": {
+
+"registratie": "BAG",
+
+"objecttype": "Verblijfsobject",
+
+"object identificatie": {
+
+"lokaalid": "0307010000456182",
+
+"versie": "3",
+
+"tijdstipregistratie": "12-10-2015"
+
+},
+
+"relatie.1": "hoofdadres",
+
+"relatie.2": "nevenadres"
+
+}
+
+}
+
+}
+
+}
+
+}
+
+}
