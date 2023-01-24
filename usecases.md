@@ -46,6 +46,12 @@ gebied,
 
 -   Herkomst wordt apart van klasse Adres gemodelleerd.
 
+Model
+
+![](media/1195286a0daaf2bc0ba767bdc511a86f.png)
+
+![](media/1cf6d5c59a1f912037e34dfba2ebf38a.png)
+
 JSON voorbeeld
 --------------
 
