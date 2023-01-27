@@ -8,7 +8,8 @@
   * We willen ook het objecttype zonder metadata kunnen uitwisselen omdat dit hetgeen is waar de meeste gebruikers in geinteresseerd zijn.
 * Waarom een model voor gegevenstypen? We willen dit generiek maken zodat we dit als generiek patroon kunnen toepassen op alle objecttypen.
 * Waarom een metamodel? Als we op metamodel (M2) niveau definieren hoe Objecttype en Gegevenstype zich tot elkaar verhouden dan kan het model en de instanties van de gegevenstypes afgeleid worden uit een instantie van een objecttype.
-
+  
+  Eenzelfde stap wordt in de RDF wereld momenteel ook gezet met [RDF-star](https://w3c.github.io/rdf-star/cg-spec)
 
 ## Generiek model herkomst
 
