@@ -65,7 +65,7 @@ Een data voorbeeld op basis van dit model:
               "type": "Nummeraanduiding" 
             },
             "kenmerk": "identificatie",
-            "waarde": "0200300022472362",
+            "waarde": "0200200000075716",
             "bronregistratie": [
               {
                 "naam": "BAG"
@@ -185,7 +185,7 @@ Een data voorbeeld op basis van dit model:
         "afgeleidVan": [
           {
             "onderwerp": {
-              "identificatie": "3560",
+              "identificatie": "0200010000130331",
               "domein": "NL.IMBAG.VBO",
               "type": "Verblijfsobject" 
             },
