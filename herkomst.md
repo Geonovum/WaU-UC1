@@ -30,7 +30,7 @@ We nemen hier op dat een gegeven uit het Adres model afgeleid kan zijn uit een a
 Van dat andere gegeven kunnen we de bronregistratie opnemen.
 Van dat andere gegeven weten we ook wat het onderwerp, diens identificatie en type (afgeleid gegeven) is.
 
-![](./media/herkomst/adres-herkomst.drawio.png)
+![](./media/herkomst/adres-herkomst-productmodel.drawio.png)
 
 Een data voorbeeld op basis van dit model:
 
