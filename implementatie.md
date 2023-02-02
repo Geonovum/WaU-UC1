@@ -14,7 +14,9 @@ hieronder gespecificieerd.
 
 ### Objecttype Adres
 
-| Voor objecttype Adres wordt een attribuutwaarde in gevuld met de waarde welke correspondeert met een attribuutwaarde van een objecttype in de BAG conform onderstaande tabel. |                      |                      |                                                                              |                            |                 |   |   |   |
+Voor objecttype Adres wordt een attribuutwaarde in gevuld met de waarde welke correspondeert met een attribuutwaarde van een objecttype in de BAG conform onderstaande tabel.
+
+| **Productmodel Adres** |                      |                      |  **IMBAG**                                                                             |                            |                 |   |   |   |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|----------------------|------------------------------------------------------------------------------|----------------------------|-----------------|---|---|---|
 | **objecttype**                                                                                                                                                                | **attribuut**        | **datatype**         | **objecttype**                                                               | **attribuut**              | **datatype**    |   |   |   |
 | Adres                                                                                                                                                                         | identificatie        | CharacterString {id} | Nummeraanduiding                                                             | identificatie              | Objectnummering |   |   |   |
