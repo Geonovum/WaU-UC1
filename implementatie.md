@@ -125,10 +125,8 @@ meer brongegevens gelegd conform onderstaande tabel.
 JSON Voorbeeld
 --------------
 
-JSON voorbeeld
---------------
 
-### JSON alleen adres
+## Object adres zonder registraties
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {
@@ -144,7 +142,7 @@ JSON voorbeeld
     }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### `JSON registratiegegevens voor kenmerk identificatie`
+## Registratiegegevens voor attribuut identificatie van Adres
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
