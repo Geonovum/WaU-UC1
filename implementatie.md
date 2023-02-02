@@ -14,22 +14,24 @@ hieronder gespecificieerd.
 
 ### Objecttype Adres
 
-Voor objecttype Adres wordt een attribuutwaarde in gevuld met de waarde welke correspondeert met een attribuutwaarde van een objecttype in de BAG conform onderstaande tabel.
+Voor objecttype Adres wordt een attribuutwaarde in gevuld met de waarde welke
+correspondeert met een attribuutwaarde van een objecttype in de BAG conform
+onderstaande tabel.
 
-| **Productmodel Adres** |                      |                      |  **IMBAG**                                                                             |                            |                 |   |   |   |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|----------------------|------------------------------------------------------------------------------|----------------------------|-----------------|---|---|---|
-| **objecttype**                                                                                                                                                                | **attribuut**        | **datatype**         | **objecttype**                                                               | **attribuut**              | **datatype**    |   |   |   |
-| Adres                                                                                                                                                                         | identificatie        | CharacterString {id} | Nummeraanduiding                                                             | identificatie              | Objectnummering |   |   |   |
-|                                                                                                                                                                               | omschrijving         | CharacterString      |                                                                              |                            |                 |   |   |   |
-|                                                                                                                                                                               | huisnummer           | Integer              |                                                                              | huisnummer                 | Integer         |   |   |   |
-|                                                                                                                                                                               | huisletter           | CharacterString      |                                                                              | huisletter                 | AN              |   |   |   |
-|                                                                                                                                                                               | huisnummertoevoeging | CharacterString      |                                                                              | huisnummertoevoeging       | AN              |   |   |   |
-|                                                                                                                                                                               | postcode             | CharacterString      |                                                                              | postcode                   | AN              |   |   |   |
-|                                                                                                                                                                               |                      |                      |                                                                              | gerelateerdeOpenbareRuimte | Objectnummering |   |   |   |
-|                                                                                                                                                                               | straatnaam           | CharacterString      | Openbareruimte                                                               | naam                       | AN              |   |   |   |
-|                                                                                                                                                                               |                      |                      |                                                                              | gerelateerdeWoonplaats     | Objectnummering |   |   |   |
-|                                                                                                                                                                               | woonplaats           | CharacterString      | Woonplaats                                                                   | naam                       | AN              |   |   |   |
-|                                                                                                                                                                               | *isHoofdadres*       | *Boolean*            | *«Nummeraanduiding:identificatie» == «AdresseerbaarObject:gerelateerdAdres»* | *relatie*                  |                 |   |   |   |
+| **Productmodel Adres** |                      |                      | **IMBAG**                                                                    |                            |                 |   |   |   |
+|------------------------|----------------------|----------------------|------------------------------------------------------------------------------|----------------------------|-----------------|---|---|---|
+| **objecttype**         | **attribuut**        | **datatype**         | **objecttype**                                                               | **attribuut**              | **datatype**    |   |   |   |
+| Adres                  | identificatie        | CharacterString {id} | Nummeraanduiding                                                             | identificatie              | Objectnummering |   |   |   |
+|                        | omschrijving         | CharacterString      |                                                                              |                            |                 |   |   |   |
+|                        | huisnummer           | Integer              |                                                                              | huisnummer                 | Integer         |   |   |   |
+|                        | huisletter           | CharacterString      |                                                                              | huisletter                 | AN              |   |   |   |
+|                        | huisnummertoevoeging | CharacterString      |                                                                              | huisnummertoevoeging       | AN              |   |   |   |
+|                        | postcode             | CharacterString      |                                                                              | postcode                   | AN              |   |   |   |
+|                        |                      |                      |                                                                              | gerelateerdeOpenbareRuimte | Objectnummering |   |   |   |
+|                        | straatnaam           | CharacterString      | Openbareruimte                                                               | naam                       | AN              |   |   |   |
+|                        |                      |                      |                                                                              | gerelateerdeWoonplaats     | Objectnummering |   |   |   |
+|                        | woonplaats           | CharacterString      | Woonplaats                                                                   | naam                       | AN              |   |   |   |
+|                        | *isHoofdadres*       | *Boolean*            | *«Nummeraanduiding:identificatie» == «AdresseerbaarObject:gerelateerdAdres»* | *relatie*                  |                 |   |   |   |
 
 Adres:nummeraanduiding is samenstelling van verschillende attributen:
 
@@ -125,45 +127,67 @@ meer brongegevens gelegd conform onderstaande tabel.
 JSON Voorbeeld
 --------------
 
+### Object adres zonder registraties
 
-## Object adres zonder registraties
+### `    {`
+
+### `      "adres": {`
+
+### `        "identificatie": "0307200000456181",`
+
+### `        "omschrijving": "Barchman Wuytierslaan 10, 3818LH Amersfoort",`
+
+### `        "straat": "Barchman Wuytierslaan",`
+
+### `        "huisnummer": "10",`
+
+### `        "huisletter": null,`
+
+### `        "huisnummertoevoeging": null,`
+
+### `        "postcode": "3818LH",`
+
+### `        "plaats": "Amersfoort",`
+
+### `    }`
+
+### Registratiegegevens voor attribuut identificatie van Adres
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-{
-  "adres": {
-    "identificatie": "0307200000456181",
-    "omschrijving": "Barchman Wuytierslaan 10, 3818LH Amersfoort",
-    "straat": "Barchman Wuytierslaan",
-    "huisnummer": "10",
-    "huisletter": null,
-    "huisnummertoevoeging": null,
-    "postcode": "3818LH",
-    "plaats": "Amersfoort",
-    }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-## Registratiegegevens voor attribuut identificatie van Adres
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{"registratiegegevens": {
 
-{"registratiegegevens": {  
-"orkestratiegegeven.1": {  
-"kenmerk": "identificatie",  
-"waarde": "03070201234567890123456",  
-"brongegeven" : {  
-"kenmerk": "identificatie",  
-"waarde”: "03070201234567890123456",  
-"bronregistratie”: "BAG",  
-"bronobject" : {  
-"type": "Nummeraanduiding",  
-"identificatie": "03070201234567890123456",  
-},  
-},  
-},  
+"orkestratiegegeven.1": {
+
+"kenmerk": "identificatie",
+
+"waarde": "03070201234567890123456",
+
+"brongegeven" : {
+
+"kenmerk": "identificatie",
+
+"waarde”: "03070201234567890123456",
+
+"bronregistratie”: "BAG",
+
+"bronobject" : {
+
+"type": "Nummeraanduiding",
+
+"identificatie": "03070201234567890123456",
+
+},
+
+},
+
+},
+
+}},  
 }
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	
+    
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
