@@ -1,0 +1,282 @@
+
+  { "openapi" : "3.0.0",
+    "info" : 
+    { "title" : "Adres",
+      "description" : "Adres components\/schema",
+      "version" : "1.0" },
+    "paths" : 
+    { "\/" : 
+      { "get" : 
+        { "description" : "a path",
+          "responses" : 
+          { "200" : 
+            { "description" : "okay",
+              "content" : 
+              { "text\/plain" : 
+                { "schema" : 
+                  { "type" : "string",
+                    "example" : "pong" } } } } } } } },
+    "components" : 
+    { "schemas" : 
+      { "Onderwerp" : 
+        { "title" : "Onderwerp",
+          "description" : "Een product als resultaat uit orkestratie van brongegevens." },
+        "Adres" : 
+        { "title" : "Adres",
+          "description" : "Een samengesteld adres van gegevens van een Nummeraanduiding, Openbare ruimte en Woonplaats in de Basisregistratie Adressen en Gebouwen (BAG).",
+          "type" : "object",
+          "allOf" : 
+          [ 
+            { "$ref" : "#\/components\/schemas\/Onderwerp" },
+            
+            { "required" : 
+              [ "identificatie",
+                "omschrijving",
+                "straatnaam",
+                "huisnummer",
+                "plaatsnaam",
+                "is hoofdadres",
+                "is geregistreerd met" ],
+              "properties" : 
+              { "identificatie" : 
+                { "title" : "identificatie",
+                  "description" : "De unieke aanduiding van een nummeraanduiding.",
+                  "type" : "string",
+                  "minItems" : "1" },
+                "omschrijving" : 
+                { "title" : "omschrijving",
+                  "description" : "De unieke aanduiding van een nummeraanduiding.",
+                  "type" : "string",
+                  "minItems" : "1" },
+                "straatnaam" : 
+                { "title" : "straatnaam",
+                  "description" : "Een naam die aan een openbare ruimte is toegekend in een daartoe strekkend formeel gemeentelijk besluit.",
+                  "type" : "string",
+                  "minLength" : "1",
+                  "minItems" : "1" },
+                "huisnummer" : 
+                { "title" : "huisnummer",
+                  "description" : "Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende nummering.",
+                  "type" : "integer",
+                  "minLength" : "1",
+                  "pattern" : "^[1-9][0-9]{0,4}$",
+                  "minItems" : "1" },
+                "huisletter" : 
+                { "title" : "huisletter",
+                  "description" : "Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende toevoeging aan een huisnummer in de vorm van een alfanumeriek teken.",
+                  "type" : 
+                  [ "string",
+                    null ],
+                  "pattern" : "^[a-zA-Z]{1}$",
+                  "minItems" : "0" },
+                "huisnummertoevoeging" : 
+                { "title" : "huisnummertoevoeging",
+                  "description" : "Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende nadere toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.",
+                  "type" : 
+                  [ "string",
+                    null ],
+                  "minLength" : "1",
+                  "pattern" : "^[0-9a-zA-Z]{1,4}$",
+                  "minItems" : "0" },
+                "postcode" : 
+                { "title" : "postcode",
+                  "description" : "De door PostNL vastgestelde code behorende bij een bepaalde combinatie van een straatnaam en een huisnummer.",
+                  "type" : 
+                  [ "string",
+                    null ],
+                  "pattern" : "^[1-9][0-9]{3}[A-Z]{2}$",
+                  "minItems" : "0" },
+                "plaatsnaam" : 
+                { "title" : "plaatsnaam",
+                  "description" : "De benaming van een door het gemeentebestuur aangewezen woonplaats.",
+                  "type" : "string",
+                  "minLength" : "1",
+                  "minItems" : "1" },
+                "is hoofdadres" : 
+                { "title" : "is hoofdadres",
+                  "description" : "Indicatie of het adres een hoofdadres is.",
+                  "type" : "boolean",
+                  "minItems" : "1" },
+                "is geregistreerd met" : 
+                { "title" : "is geregistreerd met",
+                  "$ref" : "#\/components\/schemas\/Registratiegegevens" } } } ] },
+        "Registratiegegevens" : 
+        { "title" : "Registratiegegevens",
+          "description" : "Gegevens inzake de registratie van een object.",
+          "type" : "object",
+          "required" : 
+          [ "bestaat uit" ],
+          "properties" : 
+          { "bestaat uit" : 
+            { "title" : "bestaat uit",
+              "description" : "Registratiegevens bestaat uit één of meer Orkestratiegegevens.",
+              "type" : "array",
+              "items" : 
+              { "$ref" : "#\/components\/schemas\/Orkestratiegegeven" },
+              "minItems" : "1" } } },
+        "Orkestratiegegeven" : 
+        { "title" : "Orkestratiegegeven",
+          "description" : "Een gegeven dat is ontstaan\/verkregen middels het orkestreren van brongegevens.",
+          "type" : "object",
+          "required" : 
+          [ "kenmerk",
+            "waarde",
+            "maakt deel uit van" ],
+          "properties" : 
+          { "kenmerk" : 
+            { "title" : "kenmerk",
+              "description" : "De naam van het attribuut of de relatie van het Orkestratiegegeven.",
+              "type" : "string",
+              "minItems" : "1" },
+            "waarde" : 
+            { "title" : "waarde",
+              "description" : "De waarde van het attribuut of de relatie van het Orkestratiegegeven.",
+              "$ref" : "#\/components\/schemas\/WaardeOrkestratiegegeven" },
+            "is afgeleid van" : 
+            { "title" : "is afgeleid van",
+              "description" : "Orkestratiegegeven is afgeleid van één of meer Brongegevens.",
+              "type" : "array",
+              "items" : 
+              { "$ref" : "#\/components\/schemas\/Brongegeven" },
+              "minItems" : "0" },
+            "maakt deel uit van" : 
+            { "title" : "maakt deel uit van",
+              "description" : "Orkestratiegegeven maakt deel uit van een Onderwerp.",
+              "$ref" : "#\/components\/schemas\/Onderwerp" } } },
+        "Brongegeven" : 
+        { "title" : "Brongegeven",
+          "description" : "Een gegeven van een Bronobject.",
+          "type" : "object",
+          "required" : 
+          [ "kenmerk",
+            "waarde",
+            "heeft als herkomst",
+            "maakt deel uit van" ],
+          "properties" : 
+          { "kenmerk" : 
+            { "title" : "kenmerk",
+              "description" : "De naam van het attribuut of de relatie van het Brongegeven.",
+              "type" : "string",
+              "minItems" : "1" },
+            "waarde" : 
+            { "title" : "waarde",
+              "description" : "De waarde van het attribuut of de relatie van het Brongegeven.",
+              "type" : "string",
+              "minItems" : "1" },
+            "heeft als herkomst" : 
+            { "title" : "heeft als herkomst",
+              "description" : "Een Brongegeven heeft als herkomst een Bronregistratie.",
+              "$ref" : "#\/components\/schemas\/Bronregistratie" },
+            "maakt deel uit van" : 
+            { "title" : "maakt deel uit van",
+              "description" : "Brongegeven hoort bij één Bronobject.",
+              "$ref" : "#\/components\/schemas\/Bronobject" } } },
+        "Bronobject" : 
+        { "title" : "Bronobject",
+          "description" : "Een object in een Bronregistratie.",
+          "type" : "object",
+          "required" : 
+          [ "type",
+            "identificatie" ],
+          "properties" : 
+          { "type" : 
+            { "title" : "type",
+              "description" : "Het type Bronobject in de Bronregistratie.",
+              "type" : "string",
+              "minItems" : "1" },
+            "identificatie" : 
+            { "title" : "identificatie",
+              "description" : "De identificatie van het Bronobject in de Bronregistratie.",
+              "type" : "string",
+              "minItems" : "1" } } },
+        "Bronregistratie" : 
+        { "title" : "Bronregistratie",
+          "description" : "Een registratie, welke als bron heeft gediend voor de orkestratie van brongegevens.",
+          "type" : "object",
+          "required" : 
+          [ "naam" ],
+          "properties" : 
+          { "naam" : 
+            { "title" : "naam",
+              "description" : "De naam van de Bronregistratie.",
+              "$ref" : "#\/components\/schemas\/Registratie" } } },
+        "WaardeOrkestratiegegeven" : 
+        { "title" : "WaardeOrkestratiegegeven",
+          "description" : "Keuze tussen waarden van een Orkestratiegegeven.",
+          "oneOf" : 
+          [ 
+            { "$ref" : "#\/components\/schemas\/tekst" },
+            
+            { "$ref" : "#\/components\/schemas\/nummer" },
+            
+            { "$ref" : "#\/components\/schemas\/indicatie" } ] },
+        "tekst" : 
+        { "title" : "tekst",
+          "description" : "Waarde is tekst van het type CharacterString.",
+          "type" : "string",
+          "minItems" : "1" },
+        "nummer" : 
+        { "title" : "nummer",
+          "description" : "Waarde is een nummer van het type geheel getal.",
+          "type" : "integer",
+          "minItems" : "1" },
+        "indicatie" : 
+        { "title" : "indicatie",
+          "description" : "Waarde is een indicatie van het type Boolean (o.m. true\/false, ja\/nee, 0\/1).",
+          "type" : "boolean",
+          "minItems" : "1" },
+        "WaardeBrongegeven" : 
+        { "title" : "WaardeBrongegeven",
+          "description" : "Keuze tussen waarden van een Brongegeven.",
+          "oneOf" : 
+          [ 
+            { "$ref" : "#\/components\/schemas\/identificatie" },
+            
+            { "$ref" : "#\/components\/schemas\/nummer" },
+            
+            { "$ref" : "#\/components\/schemas\/tekst" } ] },
+        "identificatie" : 
+        { "title" : "identificatie",
+          "description" : "Waarde is een identificatie van het type Objectnummering.",
+          "$ref" : "#\/components\/schemas\/Objectnummering" },
+        "Objectnummering" : 
+        { "title" : "Objectnummering",
+          "description" : "Unieke objectaanduiding binnen een gemeente.",
+          "type" : "object",
+          "required" : 
+          [ "gemeentecode",
+            "objecttypecode",
+            "objectvolgnummer" ],
+          "properties" : 
+          { "gemeentecode" : 
+            { "title" : "gemeentecode",
+              "description" : "De unieke aanduiding van de gemeente in Nederland die aan het object een identificatienummer heeft toegekend.",
+              "$ref" : "#\/components\/schemas\/AN" },
+            "objecttypecode" : 
+            { "title" : "objecttypecode",
+              "description" : "Een code waarmee het objecttype van een object wordt aangegeven.",
+              "$ref" : "#\/components\/schemas\/Objecttypecode" },
+            "objectvolgnummer" : 
+            { "title" : "objectvolgnummer",
+              "description" : "Een uniek volgnummer waarmee een object van een bepaald objecttype binnen een gemeente kan worden aangeduid.",
+              "$ref" : "#\/components\/schemas\/AN" } } },
+        "Registratie" : 
+        { "title" : "Registratie",
+          "description" : "Waardenlijst voor Bronregistratie.",
+          "enum" : 
+          [ "BAG" ] },
+        "Objecttypecode" : 
+        { "title" : "Objecttypecode",
+          "description" : "Een code waarmee het objecttype van een object wordt aangegeven.",
+          "enum" : 
+          [ "01",
+            "02",
+            "03",
+            "10",
+            "20",
+            "30" ] },
+        "AN" : 
+        { "title" : "AN",
+          "description" : "Datatype met een eigen naam, analoog aan CharacterString. De minimale lengte is tenminste een teken en de eerste positie mag geen spatie bevatten. Alle 335 tekens uit de gestandaardiseerde deelverzameling MES-1 van Unicode zijn toegestaan[^7-10-1-i].",
+          "type" : "string",
+          "minItems" : "1" } } } }
