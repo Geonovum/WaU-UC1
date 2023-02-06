@@ -11,6 +11,9 @@
   
   Eenzelfde stap wordt in de RDF wereld momenteel ook gezet met [RDF-star](https://w3c.github.io/rdf-star/cg-spec)
 
+Schets metamodel:
+![](./media/herkomst/gegevens-metamodel.drawio.png)
+
 ## Generiek model herkomst
 
 * Gebaseerd op [PROV](https://www.w3.org/TR/prov-overview/) standaard
