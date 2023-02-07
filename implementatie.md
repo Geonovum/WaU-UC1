@@ -39,7 +39,7 @@ Adres:nummeraanduiding is samenstelling van verschillende attributen:
 
 -   gevolgd door een spatie, gevolgd door huisnummer van BAG:Nummeraanduiding,
 
--   evt. gevolgd door spatie en huisnummertoevoeging van BAG:Nummeraanduiding,
+-   evt. gevolgd door spatie en huisnummerletter van BAG:Nummeraanduiding,
 
 -   evt. gevolgd door koppelteken (-) en huisnummertoevoeging van
     BAG:Nummeraanduiding, gevolgd door komma en spatie,
@@ -58,7 +58,7 @@ Bijvoorbeeld
 
 Reguliere expressie:
 
-\^(«BAG:OpenbareRuimte:naam»)(\\s)(«BAG:Nummeraanduiding:huisnummer»)(«BAG:Nummeraanduiding:huisletter»)(\\-)(«BAG:Nummeraanduiding:huisnummertoevoeging»)(,\\s)(«BAG:Nummeraanduiding:postcode»)(\\s\\s)(BAG:Woonplaats:naam)
+\^(«BAG:OpenbareRuimte:naam»)(\\s)(«BAG:Nummeraanduiding:huisnummer»)(\\s)(«BAG:Nummeraanduiding:huisletter»)(\\-)(«BAG:Nummeraanduiding:huisnummertoevoeging»)(,\\s)(«BAG:Nummeraanduiding:postcode»)(\\s\\s)(BAG:Woonplaats:naam)
 
 ### Objecttype Orkestratiegegeven
 
