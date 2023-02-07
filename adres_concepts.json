@@ -1,0 +1,379 @@
+
+  [ 
+    { "@type" : "skos:ConceptScheme",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "naam" : "Adres",
+      "uitleg" : "TODO",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Adres",
+      "naam" : "Adres",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "definitie" : "Een samengesteld adres van gegevens van een Nummeraanduiding, Openbare ruimte en Woonplaats in de Basisregistratie Adressen en Gebouwen (BAG).",
+      "term" : "Adres",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Adres",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "identificatie",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Identificatie_adres",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "identificatie",
+      "definitie" : "De unieke aanduiding van een nummeraanduiding.",
+      "codes" : "identificatie",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Identificatie_adres",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "omschrijving",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Omschrijving",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "omschrijving",
+      "definitie" : "De unieke aanduiding van een nummeraanduiding.",
+      "codes" : "omschrijving",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Omschrijving",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "straatnaam",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Straatnaam",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "straatnaam",
+      "definitie" : "Een naam die aan een openbare ruimte is toegekend in een daartoe strekkend formeel gemeentelijk besluit.",
+      "codes" : "straatnaam",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Straatnaam",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "huisnummer",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Huisnummer",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "huisnummer",
+      "definitie" : "Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende nummering.",
+      "codes" : "huisnummer",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Huisnummer",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "huisletter",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Huisletter",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "huisletter",
+      "definitie" : "Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende toevoeging aan een huisnummer in de vorm van een alfanumeriek teken.",
+      "codes" : "huisletter",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Huisletter",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "huisnummertoevoeging",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Huisnummertoevoeging",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "huisnummertoevoeging",
+      "definitie" : "Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende nadere toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.",
+      "codes" : "huisnummertoevoeging",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Huisnummertoevoeging",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "postcode",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Postcode",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "postcode",
+      "definitie" : "De door PostNL vastgestelde code behorende bij een bepaalde combinatie van een straatnaam en een huisnummer.",
+      "codes" : "postcode",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Postcode",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "plaatsnaam",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Plaatsnaam",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "plaatsnaam",
+      "definitie" : "De benaming van een door het gemeentebestuur aangewezen woonplaats.",
+      "codes" : "plaatsnaam",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Plaatsnaam",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "isHoofdadres",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Ishoofdadres",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "isHoofdadres",
+      "definitie" : "Indicatie of het adres een hoofdadres is.",
+      "codes" : "isHoofdadres",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Ishoofdadres",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Registratiegegevens",
+      "naam" : "Registratiegegevens",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "definitie" : "Gegevens inzake de registratie van een object.",
+      "term" : "Registratiegegevens",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Registratiegegevens",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Georkestreerdgegeven",
+      "naam" : "GeorkestreerdGegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "definitie" : "Een gegeven dat is ontstaan\/verkregen middels het orkestreren van brongegevens.",
+      "term" : "GeorkestreerdGegeven",
+      "isGeneralisatieVan" : 
+      [ "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Georkesteerdcharacterstringgegeven",
+        "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Georkestreerdintegergegeven",
+        "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Georkestreerdbooleangegeven" ],
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Georkestreerdgegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "kenmerk",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Kenmerk_georkestreerdGegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "kenmerk",
+      "definitie" : "De naam van het attribuut of de relatie van het Orkestratiegegeven.",
+      "codes" : "kenmerk",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Kenmerk_georkestreerdGegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Georkesteerdcharacterstringgegeven",
+      "naam" : "GeorkesteerdCharacterStringGegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "definitie" : "GeorkestreerdGegeven met als waarde een CharacterString.",
+      "term" : "GeorkesteerdCharacterStringGegeven",
+      "isSpecialisatieVan" : 
+      [ "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Georkestreerdgegeven" ],
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Georkesteerdcharacterstringgegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "waarde",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Waarde_georkesteerdCharacterStringGegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "waarde",
+      "definitie" : "",
+      "codes" : "waarde",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Waarde_georkesteerdCharacterStringGegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Georkestreerdintegergegeven",
+      "naam" : "GeorkestreerdIntegerGegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "definitie" : "GeorkestreerdGegeven met als waarde een Integer.",
+      "term" : "GeorkestreerdIntegerGegeven",
+      "isSpecialisatieVan" : 
+      [ "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Georkestreerdgegeven" ],
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Georkestreerdintegergegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "waarde",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Waarde_georkestreerdIntegerGegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "waarde",
+      "definitie" : "",
+      "codes" : "waarde",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Waarde_georkestreerdIntegerGegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Georkestreerdbooleangegeven",
+      "naam" : "GeorkestreerdBooleanGegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "definitie" : "GeorkestreerdGegeven met als waarde een Boolean.",
+      "term" : "GeorkestreerdBooleanGegeven",
+      "isSpecialisatieVan" : 
+      [ "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Georkestreerdgegeven" ],
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Georkestreerdbooleangegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "waarde",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Waarde_georkestreerdBooleanGegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "waarde",
+      "definitie" : "",
+      "codes" : "waarde",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Waarde_georkestreerdBooleanGegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Brongegeven",
+      "naam" : "Brongegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "definitie" : "Een gegeven van een Bronobject.",
+      "term" : "Brongegeven",
+      "isGeneralisatieVan" : 
+      [ "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Broncharacterstringgegeven",
+        "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Bronintegergegeven",
+        "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Bronrelatiegegeven" ],
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Brongegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "kenmerk",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Kenmerk_brongegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "kenmerk",
+      "definitie" : "De naam van het attribuut of de relatie van het Brongegeven.",
+      "codes" : "kenmerk",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Kenmerk_brongegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Broncharacterstringgegeven",
+      "naam" : "BronCharacterStringGegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "definitie" : "Brongegeven met als waarde een CharacterString.",
+      "term" : "BronCharacterStringGegeven",
+      "isSpecialisatieVan" : 
+      [ "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Brongegeven" ],
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Broncharacterstringgegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "waarde",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Waarde_bronCharacterStringGegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "waarde",
+      "definitie" : "",
+      "codes" : "waarde",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Waarde_bronCharacterStringGegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Bronintegergegeven",
+      "naam" : "BronIntegerGegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "definitie" : "Brongegeven met als waarde een Integer.",
+      "term" : "BronIntegerGegeven",
+      "isSpecialisatieVan" : 
+      [ "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Brongegeven" ],
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Bronintegergegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "waarde",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Waarde_bronIntegerGegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "waarde",
+      "definitie" : "",
+      "codes" : "waarde",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Waarde_bronIntegerGegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Bronrelatiegegeven",
+      "naam" : "BronRelatieGegeven",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "definitie" : "Brongegeven met als waarde een relatie naar een Bronobject.",
+      "term" : "BronRelatieGegeven",
+      "isSpecialisatieVan" : 
+      [ "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Brongegeven" ],
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Bronrelatiegegeven",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Bronobject",
+      "naam" : "Bronobject",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "definitie" : "Een object in een Bronregistratie.",
+      "term" : "Bronobject",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Bronobject",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "type",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Type",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "type",
+      "definitie" : "Het type Bronobject in de Bronregistratie.",
+      "codes" : "type",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Type",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "identificatie",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Identificatie_bronobject",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "identificatie",
+      "definitie" : "De identificatie van het Bronobject in de Bronregistratie.",
+      "codes" : "identificatie",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Identificatie_bronobject",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Bronregistratie",
+      "naam" : "Bronregistratie",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "definitie" : "Een registratie, welke als bron heeft gediend voor de orkestratie van brongegevens.",
+      "term" : "Bronregistratie",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Bronregistratie",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "skos:Concept",
+      "naam" : "naam",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Naam",
+      "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+      "term" : "naam",
+      "definitie" : "De naam van de Bronregistratie.",
+      "codes" : "naam",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Naam",
+        "startdatumGeldigheid" : "2023-01-01" } },
+    
+    { "@type" : "catalogus:WaardelijstAsset",
+      "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/waardelijst\/Registratie_1.0",
+      "naam" : "Registratie",
+      "beschrijving" : "",
+      "versie" : "1.0",
+      "metadata" : 
+      { "uri" : "http:\/\/definities.geostandaarden.nl\/20230101000000\/doc\/waardelijst\/20230101000000\/Registratie_1.0",
+        "startdatumGeldigheid" : "2023-01-01" },
+      "waardes" : 
+      [ 
+        { "@type" : "skos:Concept",
+          "naam" : "BAG",
+          "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/id\/begrip\/Bag",
+          "domein" : "http:\/\/definities.geostandaarden.nl\/wau",
+          "term" : "BAG",
+          "definitie" : "Basisregistratie Adressen en Gebouwen",
+          "codes" : "BAG",
+          "metadata" : 
+          { "uri" : "http:\/\/definities.geostandaarden.nl\/wau\/doc\/begrip\/20230101000000\/Bag",
+            "startdatumGeldigheid" : "2023-01-01" } } ] } ]
