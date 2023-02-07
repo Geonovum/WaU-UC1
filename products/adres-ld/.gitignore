@@ -1,0 +1,26 @@
+#
+### Maven ###
+#
+**/target
+
+# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
+!/.mvn/wrapper/maven-wrapper.jar
+
+#
+### Intellij ###
+#
+# Based on https://intellij-support.jetbrains.com/hc/en-us/articles/206544839-How-to-manage-projects-under-Version-Control-Systems
+
+.idea
+*.iml
+.metadata
+
+#
+### Eclipse ###
+#
+**/.project
+**/.classpath
+**/.checkstyle
+**/.settings
+
+data/

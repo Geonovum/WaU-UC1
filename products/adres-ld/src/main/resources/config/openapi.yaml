@@ -1,0 +1,66 @@
+openapi: 3.0.3
+
+info:
+  title: Adres Linked data
+  version: 1.0.0
+
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+        errorCode:
+          type: string
+  parameters:
+    identificatie:
+      name: identificatie
+      in: path
+      required: true
+      schema:
+        type: string
+
+paths:
+
+  /id/adres/{identificatie}:
+    get:
+      parameters:
+        - $ref: '#/components/parameters/identificatie'
+      responses:
+        303:
+          description: "300 response"
+          headers:
+            Location:
+              schema:
+                type: string
+                x-dws-expr: "`${env.dotwebstack.baseUrl}/doc/adres/${args.identificatie}`"
+
+  /doc/adres/{identificatie}:
+    get:
+      x-dws-query:
+        field: adres
+        selectionSet: |
+          {
+            identificatie
+            huisnummer
+            postcode
+            straatnaam
+            plaatsnaam
+          }
+      x-dws-rml-mapping:
+        - adres.rml.ttl
+      parameters:
+        - $ref: '#/components/parameters/identificatie'
+      responses:
+        200:
+          description: OK
+          content:
+            text/turtle:
+              x-dws-default: true
+            application/ld+json: {}
+            text/n3: {}
+            application/n-quads: {}
+            application/n-triples: {}
+            application/rdf+xml: {}
+            application/trig: {}
