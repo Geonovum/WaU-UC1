@@ -1,0 +1,373 @@
+---
+openapi: 3.0.3
+info:
+  title: Adres REST API
+  version: 1.0.0
+  description: |-
+    Deze api levert adresgegevens.
+  contact:
+    name: Kadaster
+    url: 'https://kadaster.nl'
+servers:
+  - url: 'http://localhost:8082'
+paths:
+  /adressen:
+    get:
+      x-dws-query:
+        field: adresCollection
+        paging:
+          pageSize: args.pageSize
+          page: args.page
+      summary: Een lijst van adressen
+      tags:
+        - adres
+      responses:
+        200:
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: object
+                x-dws-envelope: true
+                required:
+                  - _embedded
+                  - _links
+                properties:
+                  _embedded:
+                    x-dws-envelope: true
+                    type: object
+                    required:
+                      - adressen
+                    properties:
+                      adressen:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Adres'
+#                  _links:
+#                    $ref: '#/components/schemas/CollectieLinks'
+        400:
+          $ref: '#/components/responses/400'
+        401:
+          $ref: '#/components/responses/401'
+        406:
+          $ref: '#/components/responses/406'
+        500:
+          $ref: '#/components/responses/500'
+        503:
+          $ref: '#/components/responses/503'
+  /adressen/{identificatie}:
+    get:
+      x-dws-query:
+        field: adres
+      summary: Een specifiek adres
+      tags:
+        - adres
+      parameters:
+        - $ref: '#/components/parameters/identificatie'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Adres'
+        400:
+          $ref: '#/components/responses/400'
+        401:
+          $ref: '#/components/responses/401'
+        406:
+          $ref: '#/components/responses/406'
+        500:
+          $ref: '#/components/responses/500'
+        503:
+          $ref: '#/components/responses/503'
+
+components:
+  parameters:
+    identificatie:
+      name: identificatie
+      description: De identificatie
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    400:
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/ExtendedError'
+      description: Bad request. Je request body bevat geen geldige JSON of de query wordt niet ondersteund door de API.
+      headers:
+        API-Version:
+          $ref: '#/components/headers/API-Version'
+    401:
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Error'
+      description: Unauthorized. Je hebt waarschijnlijk geen geldige `X-Api-Key` header meegestuurd.
+      headers:
+        API-Version:
+          $ref: '#/components/headers/API-Version'
+    404:
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Error'
+      description: Not found
+      headers:
+        API-Version:
+          $ref: '#/components/headers/API-Version'
+    406:
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Error406'
+      description: >-
+        Not Acceptable. Je hebt waarschijnlijk een gewenst formaat met de `Accept` header verstuurd welke niet
+        ondersteund wordt. De API kan momenteel alleen `application/json` terugsturen.
+      headers:
+        API-Version:
+          $ref: '#/components/headers/API-Version'
+    412:
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Error'
+      description: >-
+        Precondition Failed. De preconditie die wordt gegeven door één of meer velden in de request-header, ontbraken
+        of zijn na validatie op de server afgekeurd.
+      headers:
+        API-Version:
+          $ref: '#/components/headers/API-Version'
+    500:
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Error5xx'
+      description: Internal server error. Er vindt een storing plaats.
+      headers:
+        API-Version:
+          $ref: '#/components/headers/API-Version'
+    503:
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Error'
+      description: Service Unavailable. Er vindt mogelijk (gepland) onderhoud of een storing plaats."
+      headers:
+        API-Version:
+          $ref: '#/components/headers/API-Version'
+  schemas:
+    Adres:
+      type: object
+      required:
+        - identificatie
+        - huisnummer
+        - straatnaam
+        - plaatsnaam
+        - _links
+      properties:
+        identificatie:
+          type: string
+        huisnummer:
+          type: number
+          format: int32
+        postcode:
+          type: string
+          nullable: true
+        straatnaam:
+          type: string
+        plaatsnaam:
+          type: string
+        _links:
+          x-dws-envelope: true
+          type: object
+          required:
+            - self
+          properties:
+            self:
+              x-dws-envelope: true
+              type: object
+              description: Absolute link naar dit adres
+              required:
+                - href
+              properties:
+                href:
+                  type: string
+                  format: uri
+                  description: URL van de link
+                  x-dws-expr: "`${env.dotwebstack.baseUrl}/adressen/${data.identificatie}`"
+    CollectieLinks:
+      x-dws-envelope: true
+      type: object
+      additionalProperties: false
+      required:
+        - self
+      properties:
+        next:
+          x-dws-envelope: true
+          description: Absolute link naar volgende pagina ('null' als er geen volgende pagina is)
+          properties:
+            href:
+              x-dws-expr: "paging:next(data, args.pageSize, env.dotwebstack.baseUrl, args.requestPathAndQuery)"
+              description: URL van de link
+              format: uri
+              type: string
+          required:
+            - href
+          type: object
+        prev:
+          x-dws-envelope: true
+          description: Absolute link naar vorige pagina ('null' als er geen vorige
+            pagina is)
+          properties:
+            href:
+              x-dws-expr: "paging:prev(env.dotwebstack.baseUrl, args.requestPathAndQuery)"
+              description: URL van de link
+              format: uri
+              type: string
+              nullable: true
+          required:
+            - href
+          type: object
+        self:
+          x-dws-envelope: true
+          description: Absolute link naar huidige pagina
+          properties:
+            href:
+              x-dws-expr: "env.dotwebstack.baseUrl + args.requestPathAndQuery"
+              description: URL van de link
+              format: uri
+              type: string
+          required:
+            - href
+          type: object
+    Error:
+      type: object
+      description: 'Object gespecificeerd volgens https://tools.ietf.org/html/rfc7807.'
+      required:
+        - title
+        - status
+        - detail
+      properties:
+        type:
+          type: string
+          description: URI naar een pagina met meer informatie over deze foutmelding voor de ontwikkelaar.
+          example: 'about:blank'
+        title:
+          type: string
+          example: Not Found
+        status:
+          type: integer
+          format: int32
+          example: 404
+        detail:
+          type: string
+          example: HTTP 404 Not Found
+        instance:
+          type: string
+          example: self
+    Error406:
+      type: object
+      description: 'Object gespecificeerd volgens https://tools.ietf.org/html/rfc7807.'
+      required:
+        - title
+        - status
+        - detail
+        - acceptable
+      properties:
+        type:
+          type: string
+          description: >-
+            URI naar een pagina met meer informatie over deze foutmelding voor
+            de ontwikkelaar.
+          example: 'about:blank'
+        title:
+          type: string
+          example: Not Acceptable
+        status:
+          type: integer
+          format: int32
+          example: 406
+        detail:
+          type: string
+          example: HTTP 406 Not Acceptable
+        instance:
+          type: string
+          example: self
+        acceptable:
+          type: array
+          items:
+            type: string
+          example: '[application/json]'
+    Error5xx:
+      type: object
+      description: 'Object gespecificeerd volgens https://tools.ietf.org/html/rfc7807.'
+      required:
+        - title
+        - status
+        - detail
+      properties:
+        type:
+          type: string
+          description: >-
+            URI naar een pagina met meer informatie over deze foutmelding voor
+            de ontwikkelaar.
+          example: 'about:blank'
+        title:
+          type: string
+          example: Service Unavailable
+        status:
+          type: integer
+          format: int32
+          example: 503
+        detail:
+          type: string
+          example: HTTP 503 Service Unavailable
+        instance:
+          type: string
+          example: self
+    ExtendedError:
+      type: object
+      description: 'Object gespecificeerd volgens https://tools.ietf.org/html/rfc7807.'
+      required:
+        - title
+        - status
+        - detail
+        - invalidParams
+      properties:
+        type:
+          type: string
+          description: URI naar een pagina met meer informatie over deze foutmelding voor de ontwikkelaar.
+          example: 'about:blank'
+        title:
+          type: string
+          example: Bad Request
+        status:
+          type: integer
+          format: int32
+          example: 400
+        detail:
+          type: string
+          example: Request parameters didn't validate.
+        instance:
+          type: string
+          example: self
+        invalidParams:
+          type: array
+          items:
+            type: object
+            required:
+              - name
+              - reason
+            properties:
+              name:
+                type: string
+                example: validation.request.parameter.enum.invalid
+              reason:
+                type: string
+                example: >-
+                  Value `epsg:dummy` for parameter `Accept-Crs` is not allowed.
+                  Allowed values are <[epsg:4258, epsg:28992]>.
