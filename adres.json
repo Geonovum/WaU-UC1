@@ -6,6 +6,7 @@
     "type": "object",
     "required": [
         "identificatie",
+        "domein",
         "omschrijving",
         "straatnaam",
         "huisnummer",
@@ -19,6 +20,11 @@
             "type": "string",
             "minLength": "1"
         },
+        "domein" : 
+            { "title" : "domein",
+              "description" : "Het domein waar het object aan toe behoort.",
+              "type" : "string",
+              "minLength" : "1" },
         "omschrijving": {
             "title": "omschrijving",
             "description": "De unieke aanduiding van een nummeraanduiding.",
