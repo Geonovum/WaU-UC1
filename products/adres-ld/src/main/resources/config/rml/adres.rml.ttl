@@ -27,7 +27,8 @@
     :Adres_huisnummer ,
     :Adres_postcode ,
     :Adres_straatnaam ,
-    :Adres_plaatsnaam ;
+    :Adres_plaatsnaam ,
+    :Adres_isHoofdadres ;
 .
 
 :Adres_identificatie a rr:PredicateObjectMap ;
@@ -63,5 +64,13 @@
   rr:predicate adr:plaatsnaam ;
   rr:objectMap [
     rml:reference "plaatsnaam" ;
+  ] ;
+.
+
+:Adres_isHoofdadres a rr:PredicateObjectMap ;
+  rr:predicate adr:isHoofdadres ;
+  rr:objectMap [
+    rml:reference "isHoofdadres" ;
+    rr:datatype xsd:boolean ;
   ] ;
 .

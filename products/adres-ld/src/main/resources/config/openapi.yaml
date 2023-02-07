@@ -47,6 +47,7 @@ paths:
             postcode
             straatnaam
             plaatsnaam
+            isHoofdadres
           }
       x-dws-rml-mapping:
         - adres.rml.ttl
