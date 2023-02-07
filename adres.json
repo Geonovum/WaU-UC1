@@ -35,8 +35,8 @@
             "title": "huisnummer",
             "description": "Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende nummering.",
             "type": "integer",
-            "min": 1,
-            "max": 99999
+            "minimum": 1,
+            "maximum": 99999
         },
         "huisletter": {
             "title": "huisletter",
