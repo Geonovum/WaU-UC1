@@ -1,0 +1,1156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+=============================================================================================
+Dit bestand bevat een XML serialisatie van een informatiemodel dat is gemodelleerd volgens de 
+"Metamodel Informatie Modellering (MIM)" standaard versie 1.1.0.
+Zie: https://docs.geostandaarden.nl/mim/mim/ voor de laatste versie van de standaard.
+
+In deze serialisatie komen <mim-ref:xRef> elementen voor, zoals <mim-ref:ObjecttypeRef>. 
+Deze elementen zijn verwijzingen naar een type modelelement X elders in deze serialisatie. 
+Via xlink:href attribuut wordt naar betreffende ID verwezen, voorafgegaan door een # teken.
+Ook kan men de naam van het modelelement zelf gebruiken, zoals deze in de inhoud van het 
+element is opgenomen.
+
+Waar mogelijk is een referentie naar de officiele uitleg (met name de MIM standaard) als 
+commentaar toegevoegd. Dat is alleen bij de éérste opkomst van een contructie gedaan.
+=============================================================================================
+-->
+<mim:Informatiemodel xmlns:cs="http://www.imvertor.org/metamodels/conceptualschemas/model/v20181210"
+                     xmlns:dlogger="http://www.armatiek.nl/functions/dlogger-proxy"
+                     xmlns:mim="http://www.geostandaarden.nl/mim/informatiemodel/v2"
+                     xmlns:mim-ext="http://www.geostandaarden.nl/mim-ext/informatiemodel/v1"
+                     xmlns:mim-ref="http://www.geostandaarden.nl/mim-ref/informatiemodel/v2"
+                     xmlns:xhtml="http://www.w3.org/1999/xhtml"
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="http://www.geostandaarden.nl/mim/informatiemodel/v2 xsd/1.1.0/MIMFORMAT_Mim_relatierol_v2.xsd"><!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-naam-->
+   <mim:naam>Adres - logisch</mim:naam>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-definitie-->
+   <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-herkomst-->
+   <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-informatiemodel-type-->
+   <mim:informatiemodeltype><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:informatiemodeltype>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-informatiedomein-->
+   <mim:informatiedomein><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:informatiedomein>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-relatiemodelleringtype-->
+   <mim:relatiemodelleringtype>Relatierol leidend</mim:relatiemodelleringtype>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-mim-versie-->
+   <mim:MIMVersie>1.1.0</mim:MIMVersie>
+   <mim:packages><!--https://docs.geostandaarden.nl/mim/mim/#domein-->
+      <mim:Domein id="adres-domein-adres">
+         <mim:naam>Adres</mim:naam>
+         <mim:datatypen><!--https://docs.geostandaarden.nl/mim/mim/#enumeratie-->
+            <mim:Enumeratie id="adres-enumeratie-registratie">
+               <mim:naam>Registratie</mim:naam>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>Waardenlijst voor Bronregistratie.</xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:waarden><!--https://docs.geostandaarden.nl/mim/mim/#enumeratiewaarde-->
+                  <mim:Waarde>
+                     <mim:naam>BAG</mim:naam>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Basisregistratie Adressen en Gebouwen</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-code-->
+                     <mim:code>BAG</mim:code>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Waarde>
+               </mim:waarden>
+            </mim:Enumeratie>
+         </mim:datatypen>
+         <mim:objecttypen><!--https://docs.geostandaarden.nl/mim/mim/#objecttype-->
+            <mim:Objecttype id="adres-objecttype-adres">
+               <mim:naam>Adres</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>Een samengesteld adres van gegevens van een Nummeraanduiding, Openbare ruimte en Woonplaats in de Basisregistratie Adressen en Gebouwen (BAG).</xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-herkomst-definitie-->
+               <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+               <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-datum-opname-->
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-abstract-object-->
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:attribuutsoorten><!--https://docs.geostandaarden.nl/mim/mim/#attribuutsoort-->
+                  <mim:Attribuutsoort>
+                     <mim:naam>identificatie</mim:naam>
+                     <mim:herkomst>BAG</mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Domein waartoe het object behoort.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie>Grondslagen Basis Registratie Adressen versie 2.0</mim:herkomstDefinitie>
+                     <mim:datumOpname>Oktober 2002</mim:datumOpname>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-type-domein-van-een-waarde-een-gegeven-->
+                     <mim:type>
+                        <mim:Datatype>CHARACTERSTRING</mim:Datatype>
+                     </mim:type>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-materiele-historie-->
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-formele-historie-->
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-kardinaliteit-->
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-authentiek-->
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-afleidbaar-->
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-classificerend-->
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-mogelijk-geen-waarde-->
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-identificerend-->
+                     <mim:identificerend>true</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort>
+                     <mim:naam>domein</mim:naam>
+                     <mim:herkomst>BAG</mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Het domein waar het object aan toe behoort.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie>Grondslagen Basis Registratie Adressen versie 2.0</mim:herkomstDefinitie>
+                     <mim:datumOpname>Oktober 2002</mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>CHARACTERSTRING</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>true</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort>
+                     <mim:naam>omschrijving</mim:naam>
+                     <mim:herkomst>BAG</mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>De unieke aanduiding van een nummeraanduiding.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie>Grondslagen Basis Registratie Adressen versie 2.0</mim:herkomstDefinitie>
+                     <mim:datumOpname>Oktober 2002</mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>CHARACTERSTRING</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort>
+                     <mim:naam>straatnaam</mim:naam>
+                     <mim:herkomst>BAG</mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Een naam die aan een openbare ruimte is toegekend in een daartoe strekkend formeel gemeentelijk besluit.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie>Grondslagen Basis Registratie Adressen versie 2.0</mim:herkomstDefinitie>
+                     <mim:datumOpname>Oktober 2002</mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>CHARACTERSTRING</mim:Datatype>
+                     </mim:type>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-lengte-->
+                     <mim:lengte>1..80</mim:lengte>
+                     <mim:indicatieMaterieleHistorie>true</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>true</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort>
+                     <mim:naam>huisnummer</mim:naam>
+                     <mim:herkomst>BAG</mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Een door of namens het gemeentebestuur ten aanzien
+van een adresseerbaar object toegekende nummering.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie>Grondslagen Basis Registratie Adressen versie 2.0</mim:herkomstDefinitie>
+                     <mim:datumOpname>Oktober 2002</mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>INTEGER</mim:Datatype>
+                     </mim:type>
+                     <mim:lengte>1..5</mim:lengte>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-patroon-->
+                     <mim:patroon>Alle natuurlijke getallen tussen 1 en 99999.</mim:patroon>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-formeel-patroon-->
+                     <mim:formeelPatroon>^[1-9][0-9]{0,4}$</mim:formeelPatroon>
+                     <mim:indicatieMaterieleHistorie>true</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>true</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort>
+                     <mim:naam>huisletter</mim:naam>
+                     <mim:herkomst>BAG</mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Een door of namens het gemeentebestuur ten aanzien
+van een adresseerbaar object toegekende toevoeging
+aan een huisnummer in de vorm van een alfanumeriek
+teken.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie>Grondslagen Basis Registratie Adressen versie 2.0</mim:herkomstDefinitie>
+                     <mim:datumOpname>Oktober 2002</mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>CHARACTERSTRING</mim:Datatype>
+                     </mim:type>
+                     <mim:lengte>1</mim:lengte>
+                     <mim:patroon>een letter uit het alfabet in hoofdletter (A-Z) of kleine letter (a-z)</mim:patroon>
+                     <mim:formeelPatroon>^[a-zA-Z]{1}$</mim:formeelPatroon>
+                     <mim:indicatieMaterieleHistorie>true</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>true</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>0..1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>true</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort>
+                     <mim:naam>huisnummertoevoeging</mim:naam>
+                     <mim:herkomst>BAG</mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Een door of namens het gemeentebestuur ten aanzien
+van een adresseerbaar object toegekende nadere
+toevoeging aan een huisnummer of een combinatie van
+huisnummer en huisletter.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie>Grondslagen Basis Registratie Adressen versie 2.0</mim:herkomstDefinitie>
+                     <mim:datumOpname>Oktober 2002</mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>CHARACTERSTRING</mim:Datatype>
+                     </mim:type>
+                     <mim:lengte>1..4</mim:lengte>
+                     <mim:patroon>Een huisnummertoevoeging bestaat uit maximaal 4 alfanumerieke tekens bestaande uit een combinatie van de letters en cijfers a - z , A - Z , 0 – 9</mim:patroon>
+                     <mim:formeelPatroon>^[0-9a-zA-Z]{1,4}$</mim:formeelPatroon>
+                     <mim:indicatieMaterieleHistorie>true</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>true</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>0..1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>true</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort>
+                     <mim:naam>postcode</mim:naam>
+                     <mim:herkomst>BAG</mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>De door PostNL vastgestelde code behorende bij een
+bepaalde combinatie van een straatnaam en een
+huisnummer.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie>Ontleend aan Logisch Ontwerp GBA versie 3.0</mim:herkomstDefinitie>
+                     <mim:datumOpname>Augustus 2004</mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>CHARACTERSTRING</mim:Datatype>
+                     </mim:type>
+                     <mim:lengte>6</mim:lengte>
+                     <mim:formeelPatroon>^[1-9][0-9]{3}[A-Z]{2}$</mim:formeelPatroon>
+                     <mim:indicatieMaterieleHistorie>true</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>true</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>0..1</mim:kardinaliteit>
+                     <mim:authentiek>Basisgegeven</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>true</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort>
+                     <mim:naam>plaatsnaam</mim:naam>
+                     <mim:herkomst>BAG</mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>De benaming van een door het gemeentebestuur
+aangewezen woonplaats.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie>Grondslagen Basis Registratie Adressen versie 3.0</mim:herkomstDefinitie>
+                     <mim:datumOpname>Augustus 2004</mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>CHARACTERSTRING</mim:Datatype>
+                     </mim:type>
+                     <mim:lengte>1..80</mim:lengte>
+                     <mim:indicatieMaterieleHistorie>true</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>true</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-toelichting-->
+                     <mim:toelichting>
+                        <xhtml:body>
+                           <xhtml:p>Het maximale aantal te gebruiken tekens voor een benaming is</xhtml:p>
+                           <xhtml:p>tachtig. Het verdient aanbeveling te streven naar korte</xhtml:p>
+                           <xhtml:p>benamingen.</xhtml:p>
+                        </xhtml:body>
+                     </mim:toelichting>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort>
+                     <mim:naam>isHoofdadres</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Indicatie of het adres een hoofdadres is.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>BOOLEAN</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+               <mim:relatiesoorten><!--https://docs.geostandaarden.nl/mim/mim/#relatiesoort-->
+                  <mim:Relatiesoort>
+                     <mim:naam>isGeregistreerdMet</mim:naam>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-unidirectioneel-->
+                     <mim:unidirectioneel>true</mim:unidirectioneel>
+                     <mim:relatierollen>
+                        <mim:Bron>
+                           <mim:naam><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:naam>
+                           <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                           <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                           <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                           <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                           <mim:kardinaliteit>1</mim:kardinaliteit>
+                           <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                           <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                           <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                           <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                        </mim:Bron>
+                        <mim:Doel>
+                           <mim:naam>registratiegegevens</mim:naam>
+                           <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                           <mim:definitie>
+                              <xhtml:body>
+                                 <xhtml:p>Registraties, waarmee Adres is geregistreerd.</xhtml:p>
+                              </xhtml:body>
+                           </mim:definitie>
+                           <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                           <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                           <mim:kardinaliteit>1</mim:kardinaliteit>
+                           <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                           <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                           <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                           <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                        </mim:Doel>
+                     </mim:relatierollen>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">200</mim-ext:kenmerk>
+                        <mim-ext:kenmerk naam="kardinaliteitBron">1</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Relatiesoort>
+               </mim:relatiesoorten>
+            </mim:Objecttype>
+            <mim:Objecttype id="adres-objecttype-broncharacterstringgegeven">
+               <mim:naam>BronCharacterStringGegeven</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>Brongegeven met als waarde een CharacterString.</xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:supertypes>
+                  <mim:GeneralisatieObjecttypes>
+                     <mim:supertype>
+                        <mim-ref:ObjecttypeRef xlink:href="#adres-objecttype-brongegeven">Brongegeven</mim-ref:ObjecttypeRef>
+                     </mim:supertype>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:GeneralisatieObjecttypes>
+               </mim:supertypes>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort>
+                     <mim:naam>waarde</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>CHARACTERSTRING</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+            </mim:Objecttype>
+            <mim:Objecttype id="adres-objecttype-bronintegergegeven">
+               <mim:naam>BronIntegerGegeven</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>Brongegeven met als waarde een Integer.</xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:supertypes>
+                  <mim:GeneralisatieObjecttypes>
+                     <mim:supertype>
+                        <mim-ref:ObjecttypeRef xlink:href="#adres-objecttype-brongegeven">Brongegeven</mim-ref:ObjecttypeRef>
+                     </mim:supertype>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:GeneralisatieObjecttypes>
+               </mim:supertypes>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort>
+                     <mim:naam>waarde</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>INTEGER</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+            </mim:Objecttype>
+            <mim:Objecttype id="adres-objecttype-bronrelatiegegeven">
+               <mim:naam>BronRelatieGegeven</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>Brongegeven met als waarde een relatie naar een Bronobject.</xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:supertypes>
+                  <mim:GeneralisatieObjecttypes>
+                     <mim:supertype>
+                        <mim-ref:ObjecttypeRef xlink:href="#adres-objecttype-brongegeven">Brongegeven</mim-ref:ObjecttypeRef>
+                     </mim:supertype>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:GeneralisatieObjecttypes>
+               </mim:supertypes>
+               <mim:relatiesoorten>
+                  <mim:Relatiesoort>
+                     <mim:naam>heeftAlsWaarde</mim:naam>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>BronRelatieGegeven heeft als waarde een Bronobject.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:unidirectioneel>true</mim:unidirectioneel>
+                     <mim:relatierollen>
+                        <mim:Bron>
+                           <mim:naam><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:naam>
+                           <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                           <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                           <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                           <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                           <mim:kardinaliteit>1</mim:kardinaliteit>
+                           <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                           <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                           <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                           <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                        </mim:Bron>
+                        <mim:Doel>
+                           <mim:naam>waarde</mim:naam>
+                           <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                           <mim:definitie>
+                              <xhtml:body>
+                                 <xhtml:p>Gerelateerd Bronobject, </xhtml:p>
+                              </xhtml:body>
+                           </mim:definitie>
+                           <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                           <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                           <mim:kardinaliteit>1</mim:kardinaliteit>
+                           <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                           <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                           <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                           <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                        </mim:Doel>
+                     </mim:relatierollen>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">200</mim-ext:kenmerk>
+                        <mim-ext:kenmerk naam="kardinaliteitBron">1</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Relatiesoort>
+               </mim:relatiesoorten>
+            </mim:Objecttype>
+            <mim:Objecttype id="adres-objecttype-brongegeven">
+               <mim:naam>Brongegeven</mim:naam>
+               <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-begrip-->
+               <mim:begrip>Definitie van Brongegeven</mim:begrip>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>Een gegeven van een Bronobject.</xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:herkomstDefinitie>UC1 Adres</mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:indicatieAbstractObject>true</mim:indicatieAbstractObject>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort>
+                     <mim:naam>kenmerk</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>De naam van het attribuut of de relatie van het Brongegeven.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie>UC1 Adres</mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>CHARACTERSTRING</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+               <mim:relatiesoorten>
+                  <mim:Relatiesoort>
+                     <mim:naam>heeftAlsHerkomst</mim:naam>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Een Brongegeven heeft als herkomst een Bronregistratie.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:unidirectioneel>true</mim:unidirectioneel>
+                     <mim:relatierollen>
+                        <mim:Bron>
+                           <mim:naam><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:naam>
+                           <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                           <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                           <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                           <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                           <mim:kardinaliteit>1</mim:kardinaliteit>
+                           <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                           <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                           <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                           <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                        </mim:Bron>
+                        <mim:Doel>
+                           <mim:naam>bronregistratie</mim:naam>
+                           <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                           <mim:definitie>
+                              <xhtml:body>
+                                 <xhtml:p>Bronregistratie, waar brongegeven uit herkomt.</xhtml:p>
+                              </xhtml:body>
+                           </mim:definitie>
+                           <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                           <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                           <mim:kardinaliteit>1</mim:kardinaliteit>
+                           <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                           <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                           <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                           <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                        </mim:Doel>
+                     </mim:relatierollen>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">200</mim-ext:kenmerk>
+                        <mim-ext:kenmerk naam="kardinaliteitBron">1</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Relatiesoort>
+                  <mim:Relatiesoort>
+                     <mim:naam>heeftAlsOnderwerp</mim:naam>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Brongegeven hoort bij één Bronobject.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:unidirectioneel>true</mim:unidirectioneel>
+                     <mim:relatierollen>
+                        <mim:Bron>
+                           <mim:naam><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:naam>
+                           <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                           <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                           <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                           <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                           <mim:kardinaliteit>1</mim:kardinaliteit>
+                           <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                           <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                           <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                           <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                        </mim:Bron>
+                        <mim:Doel>
+                           <mim:naam>onderwerp</mim:naam>
+                           <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-alias-->
+                           <mim:alias>bronobject</mim:alias>
+                           <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                           <mim:definitie>
+                              <xhtml:body>
+                                 <xhtml:p>Gerelateerd Bronobject, dat het Brongegeven als onderwerp heeft.</xhtml:p>
+                              </xhtml:body>
+                           </mim:definitie>
+                           <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                           <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                           <mim:kardinaliteit>1</mim:kardinaliteit>
+                           <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                           <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                           <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                           <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                        </mim:Doel>
+                     </mim:relatierollen>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">200</mim-ext:kenmerk>
+                        <mim-ext:kenmerk naam="kardinaliteitBron">1</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Relatiesoort>
+               </mim:relatiesoorten>
+            </mim:Objecttype>
+            <mim:Objecttype id="adres-objecttype-bronobject">
+               <mim:naam>Bronobject</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>Een object in een Bronregistratie.</xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:herkomstDefinitie>UC1 Adres</mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-populatie-->
+               <mim:populatie>Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.</mim:populatie>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort>
+                     <mim:naam>type</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Het type Bronobject in de Bronregistratie.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie>UC1 Adres</mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>CHARACTERSTRING</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort>
+                     <mim:naam>identificatie</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>De identificatie van het Bronobject in de Bronregistratie.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie>UC1 Adres</mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>CHARACTERSTRING</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+            </mim:Objecttype>
+            <mim:Objecttype id="adres-objecttype-bronregistratie">
+               <mim:naam>Bronregistratie</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>Een registratie, welke als bron heeft gediend voor de orkestratie van brongegevens.</xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:herkomstDefinitie>UC1 Adres</mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort>
+                     <mim:naam>naam</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>De naam van de Bronregistratie.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie>UC1 Adres</mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim-ref:DatatypeRef xlink:href="#adres-enumeratie-registratie">Registratie</mim-ref:DatatypeRef>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+            </mim:Objecttype>
+            <mim:Objecttype id="adres-objecttype-georkesteerdcharacterstringgegeven">
+               <mim:naam>GeorkesteerdCharacterStringGegeven</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>GeorkestreerdGegeven met als waarde een CharacterString.</xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:supertypes>
+                  <mim:GeneralisatieObjecttypes>
+                     <mim:supertype>
+                        <mim-ref:ObjecttypeRef xlink:href="#adres-objecttype-georkestreerdgegeven">GeorkestreerdGegeven</mim-ref:ObjecttypeRef>
+                     </mim:supertype>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:GeneralisatieObjecttypes>
+               </mim:supertypes>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort>
+                     <mim:naam>waarde</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>CHARACTERSTRING</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+            </mim:Objecttype>
+            <mim:Objecttype id="adres-objecttype-georkestreerdbooleangegeven">
+               <mim:naam>GeorkestreerdBooleanGegeven</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>GeorkestreerdGegeven met als waarde een Boolean.</xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:supertypes>
+                  <mim:GeneralisatieObjecttypes>
+                     <mim:supertype>
+                        <mim-ref:ObjecttypeRef xlink:href="#adres-objecttype-georkestreerdgegeven">GeorkestreerdGegeven</mim-ref:ObjecttypeRef>
+                     </mim:supertype>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:GeneralisatieObjecttypes>
+               </mim:supertypes>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort>
+                     <mim:naam>waarde</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>BOOLEAN</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+            </mim:Objecttype>
+            <mim:Objecttype id="adres-objecttype-georkestreerdgegeven">
+               <mim:naam>GeorkestreerdGegeven</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>Een gegeven dat is ontstaan/verkregen middels het orkestreren van brongegevens.</xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:herkomstDefinitie>UC1 Adres</mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:indicatieAbstractObject>true</mim:indicatieAbstractObject>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort>
+                     <mim:naam>kenmerk</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>De naam van het attribuut of de relatie van het Orkestratiegegeven.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie>UC1 Adres</mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>CHARACTERSTRING</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+               <mim:relatiesoorten>
+                  <mim:Relatiesoort>
+                     <mim:naam>isAfgeleidVan</mim:naam>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Orkestratiegegeven is afgeleid van één of meer Brongegevens.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:unidirectioneel>true</mim:unidirectioneel>
+                     <mim:relatierollen>
+                        <mim:Bron>
+                           <mim:naam><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:naam>
+                           <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                           <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                           <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                           <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                           <mim:kardinaliteit>1</mim:kardinaliteit>
+                           <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                           <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                           <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                           <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                        </mim:Bron>
+                        <mim:Doel>
+                           <mim:naam>brongegeven</mim:naam>
+                           <mim:alias>brongegeven</mim:alias>
+                           <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                           <mim:definitie>
+                              <xhtml:body>
+                                 <xhtml:p>Gerelateerd Bronogegeven, waar GeorkestreerdGegeven van is afgeleid.</xhtml:p>
+                              </xhtml:body>
+                           </mim:definitie>
+                           <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                           <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                           <mim:kardinaliteit>1</mim:kardinaliteit>
+                           <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                           <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                           <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                           <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                        </mim:Doel>
+                     </mim:relatierollen>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">200</mim-ext:kenmerk>
+                        <mim-ext:kenmerk naam="kardinaliteitBron">1</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Relatiesoort>
+                  <mim:Relatiesoort>
+                     <mim:naam>heeftAlsOnderwerp</mim:naam>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Orkestratiegegeven maakt deel uit van een Onderwerp.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:unidirectioneel>true</mim:unidirectioneel>
+                     <mim:relatierollen>
+                        <mim:Bron>
+                           <mim:naam><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:naam>
+                           <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                           <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                           <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                           <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                           <mim:kardinaliteit>1</mim:kardinaliteit>
+                           <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                           <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                           <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                           <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                        </mim:Bron>
+                        <mim:Doel>
+                           <mim:naam>onderwerp</mim:naam>
+                           <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                           <mim:definitie>
+                              <xhtml:body>
+                                 <xhtml:p>Gereleateerd Adres dat een GeorkestreerdGegeven als onderwerp heeft.</xhtml:p>
+                              </xhtml:body>
+                           </mim:definitie>
+                           <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                           <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                           <mim:kardinaliteit>1</mim:kardinaliteit>
+                           <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                           <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                           <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                           <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                        </mim:Doel>
+                     </mim:relatierollen>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">200</mim-ext:kenmerk>
+                        <mim-ext:kenmerk naam="kardinaliteitBron">1</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Relatiesoort>
+               </mim:relatiesoorten>
+            </mim:Objecttype>
+            <mim:Objecttype id="adres-objecttype-georkestreerdintegergegeven">
+               <mim:naam>GeorkestreerdIntegerGegeven</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>GeorkestreerdGegeven met als waarde een Integer.</xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:supertypes>
+                  <mim:GeneralisatieObjecttypes>
+                     <mim:supertype>
+                        <mim-ref:ObjecttypeRef xlink:href="#adres-objecttype-georkestreerdgegeven">GeorkestreerdGegeven</mim-ref:ObjecttypeRef>
+                     </mim:supertype>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:GeneralisatieObjecttypes>
+               </mim:supertypes>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort>
+                     <mim:naam>waarde</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype>INTEGER</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+            </mim:Objecttype>
+            <mim:Objecttype id="adres-objecttype-registratiegegevens">
+               <mim:naam>Registratiegegevens</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>Gegevens inzake de registratie van een object.</xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:herkomstDefinitie>UC1 Adres</mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:relatiesoorten>
+                  <mim:Relatiesoort>
+                     <mim:naam>bestaatUit</mim:naam>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Registratiegevens bestaat uit één of meer Orkestratiegegevens.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:unidirectioneel>true</mim:unidirectioneel>
+                     <mim:relatierollen>
+                        <mim:Bron>
+                           <mim:naam><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:naam>
+                           <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                           <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                           <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                           <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                           <mim:kardinaliteit>1</mim:kardinaliteit>
+                           <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                           <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                           <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                           <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                        </mim:Bron>
+                        <mim:Doel>
+                           <mim:naam>gegeven</mim:naam>
+                           <mim:alias>gegeven</mim:alias>
+                           <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                           <mim:definitie>
+                              <xhtml:body>
+                                 <xhtml:p>Registratiegegevens bestaat uit 1 of meer gegevens.</xhtml:p>
+                              </xhtml:body>
+                           </mim:definitie>
+                           <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                           <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                           <mim:kardinaliteit>1</mim:kardinaliteit>
+                           <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                           <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                           <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                           <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                        </mim:Doel>
+                     </mim:relatierollen>
+                     <mim-ext:kenmerken>
+                        <mim-ext:kenmerk naam="positie">200</mim-ext:kenmerk>
+                        <mim-ext:kenmerk naam="kardinaliteitBron">1</mim-ext:kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Relatiesoort>
+               </mim:relatiesoorten>
+            </mim:Objecttype>
+         </mim:objecttypen>
+      </mim:Domein>
+      <!--https://docs.geostandaarden.nl/mim/mim/#extern-->
+      <mim:Extern id="OUTSIDE-1">
+         <mim:naam>GML</mim:naam>
+         <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-locatie-->
+         <mim:locatie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:locatie>
+         <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+         <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+      </mim:Extern>
+      <mim:Extern id="OUTSIDE-2">
+         <mim:naam>GMLSF</mim:naam>
+         <mim:locatie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:locatie>
+         <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+         <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+      </mim:Extern>
+   </mim:packages>
+   <mim-ext:kenmerken>
+      <mim-ext:kenmerk naam="afkorting">WaU-UC1</mim-ext:kenmerk>
+      <mim-ext:kenmerk naam="Release">20230101</mim-ext:kenmerk>
+   </mim-ext:kenmerken>
+</mim:Informatiemodel>
