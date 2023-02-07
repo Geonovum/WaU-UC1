@@ -1,0 +1,31 @@
+logging:
+  level:
+    root: info
+    org.dotwebstack: DEBUG
+
+server:
+  port: 8082
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  server:
+    port: 8083
+
+dotwebstack:
+  baseUrl: ${BASE_URL:http://localhost:8082}
+  baseUrlData: https://wau.ldproxy.net/ld/
+  rml:
+    namespacePrefixes:
+      adr: http://modellen.geostandaarden.nl/def/adres#
+      nen3610: http://modellen.geostandaarden.nl/def/nen3610#
+  orchestrate:
+    root: proxy
+    subschemas:
+      proxy:
+        endpoint: ${LOOKUP_API_URL:http://localhost:8080/graphql}
+  openapi:
+    cors:
+      enabled: true

@@ -1,0 +1,67 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+
+@prefix adr: <http://modellen.geostandaarden.nl/def/adres#> .
+
+@prefix : <http://mappings.geostandaarden.nl/adres/id/mapping/> .
+
+:LogicalSource
+  rml:source "" ;
+  rml:referenceFormulation ql:JSONPath ;
+  rml:iterator "$" ;
+.
+
+:Adres a rr:TriplesMap ;
+  rml:logicalSource :LogicalSource ;
+  rr:subjectMap [
+    rr:template "https://wau.ldproxy.net/ld/id/adres/{identificatie}" ;
+    rr:class adr:Adres ;
+  ] ;
+  rr:predicateObjectMap
+    :Adres_identificatie ,
+    :Adres_huisnummer ,
+    :Adres_postcode ,
+    :Adres_straatnaam ,
+    :Adres_plaatsnaam ;
+.
+
+:Adres_identificatie a rr:PredicateObjectMap ;
+  rr:predicate adr:identificatie ;
+  rr:objectMap [
+    rml:reference "identificatie" ;
+  ] ;
+.
+
+:Adres_huisnummer a rr:PredicateObjectMap ;
+  rr:predicate adr:huisnummer ;
+  rr:objectMap [
+    rml:reference "huisnummer" ;
+    rr:datatype xsd:integer ;
+  ] ;
+.
+
+:Adres_postcode a rr:PredicateObjectMap ;
+  rr:predicate adr:postcode ;
+  rr:objectMap [
+    rml:reference "postcode" ;
+  ] ;
+.
+
+:Adres_straatnaam a rr:PredicateObjectMap ;
+  rr:predicate adr:straatnaam ;
+  rr:objectMap [
+    rml:reference "straatnaam" ;
+  ] ;
+.
+
+:Adres_plaatsnaam a rr:PredicateObjectMap ;
+  rr:predicate adr:plaatsnaam ;
+  rr:objectMap [
+    rml:reference "plaatsnaam" ;
+  ] ;
+.
