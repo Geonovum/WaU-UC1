@@ -90,7 +90,13 @@
                     "title": "bestaatUit",
                     "description": "Registratiegevens bestaat uit één of meer Orkestratiegegevens.",
                     "type": "array",
-                    "items": {"$ref": "#/$defs/GeorkestreerdGegeven"},
+					"items" : {
+						"oneOf" : [ 					
+								{"$ref": "#/$defs/GeorkestreerdCharacterStringGegeven"},
+								{"$ref": "#/$defs/GeorkestreerdIntegerGegeven"},
+								{"$ref": "#/$defs/GeorkestreerdBooleanGegeven"}
+							  ]
+					},
                     "minItems": 1
                 }
             }
@@ -113,7 +119,13 @@
                     "title": "isAfgeleidVan",
                     "description": "Orkestratiegegeven is afgeleid van één of meer Brongegevens.",
                     "type": "array",
-                    "items": {"$ref": "#/$defs/Brongegeven"},
+                    "items": {
+						"oneOf" : [ 					
+								{"$ref": "#/$defs/BronCharacterStringGegeven"},
+								{"$ref": "#/$defs/BronIntegerGegeven"},
+								{"$ref": "#/$defs/BronRelatieGegeven"}
+							  ]
+					},						
                     "minItems": 0
                 },
                 "heeftAlsOnderwerp": {
