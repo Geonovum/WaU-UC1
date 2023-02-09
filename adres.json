@@ -18,24 +18,24 @@
             "title": "identificatie",
             "description": "De unieke aanduiding van een nummeraanduiding.",
             "type": "string",
-            "minLength": "1"
+            "minLength": 1
         },
         "domein" : 
             { "title" : "domein",
               "description" : "Het domein waar het object aan toe behoort.",
               "type" : "string",
-              "minLength" : "1" },
+              "minLength" : 1 },
         "omschrijving": {
             "title": "omschrijving",
             "description": "De unieke aanduiding van een nummeraanduiding.",
             "type": "string",
-            "minLength": "1"
+            "minLength": 1
         },
         "straatnaam": {
             "title": "straatnaam",
             "description": "Een naam die aan een openbare ruimte is toegekend in een daartoe strekkend formeel gemeentelijk besluit.",
             "type": "string",
-            "minLength": "1"
+            "minLength": 1
         },
         "huisnummer": {
             "title": "huisnummer",
@@ -54,7 +54,7 @@
             "title": "huisnummertoevoeging",
             "description": "Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende nadere toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.",
             "type": "string",
-            "minLength": "1",
+            "minLength": 1,
             "pattern": "^[0-9a-zA-Z]{1,4}$"
         },
         "postcode": {
@@ -67,7 +67,7 @@
             "title": "plaatsnaam",
             "description": "De benaming van een door het gemeentebestuur aangewezen woonplaats.",
             "type": "string",
-            "minLength": "1"
+            "minLength": 1
         },
         "isHoofdadres": {
             "title": "isHoofdadres",
@@ -91,7 +91,7 @@
                     "description": "Registratiegevens bestaat uit één of meer Orkestratiegegevens.",
                     "type": "array",
                     "items": {"$ref": "#/$defs/GeorkestreerdGegeven"},
-                    "minItems": "1"
+                    "minItems": 1
                 }
             }
         },
@@ -114,7 +114,7 @@
                     "description": "Orkestratiegegeven is afgeleid van één of meer Brongegevens.",
                     "type": "array",
                     "items": {"$ref": "#/$defs/Brongegeven"},
-                    "minItems": "0"
+                    "minItems": 0
                 },
                 "heeftAlsOnderwerp": {
                     "title": "heeftAlsOnderwerp",
