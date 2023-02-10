@@ -1,0 +1,30 @@
+logging:
+  level:
+    root: info
+    org.dotwebstack: DEBUG
+
+server:
+  port: 8085
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  server:
+    port: 8086
+
+dotwebstack:
+  baseUrl: ${BASE_URL:http://localhost:8085}
+  baseUrlData: https://wau.ldproxy.net/core-location/ld/
+  rml:
+    namespacePrefixes:
+      locn: http://www.w3.org/ns/locn#
+  orchestrate:
+    root: proxy
+    subschemas:
+      proxy:
+        endpoint: ${LOOKUP_API_URL:http://localhost:8080/graphql}
+  openapi:
+    cors:
+      enabled: true

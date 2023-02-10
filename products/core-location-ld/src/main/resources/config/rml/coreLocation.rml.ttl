@@ -1,0 +1,74 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+
+@prefix locn: <http://www.w3.org/ns/locn#> .
+
+@prefix : <http://mappings.geostandaarden.nl/adres/id/mapping/> .
+
+:LogicalSource
+  rml:source "" ;
+  rml:referenceFormulation ql:JSONPath ;
+  rml:iterator "$" ;
+.
+
+:Address a rr:TriplesMap ;
+  rml:logicalSource :LogicalSource ;
+  rr:subjectMap [
+    rr:template "https://wau.ldproxy.net/core-location/ld/id/address/{addressID}" ;
+    rr:class locn:Address ;
+  ] ;
+  rr:predicateObjectMap
+    :Address_addressID ,
+    :Address_fullAddress ,
+    :Address_locatorDesignator ,
+    :Address_postCode ,
+    :Address_postName ,
+    :Address_thoroughfare ;
+.
+
+:Address_addressID a rr:PredicateObjectMap ;
+  rr:predicate locn:addressID ;
+  rr:objectMap [
+    rml:reference "addressID" ;
+  ] ;
+.
+
+:Address_fullAddress a rr:PredicateObjectMap ;
+  rr:predicate locn:fullAddress ;
+  rr:objectMap [
+    rml:reference "fullAddress" ;
+  ] ;
+.
+
+:Address_locatorDesignator a rr:PredicateObjectMap ;
+  rr:predicate locn:locatorDesignator ;
+  rr:objectMap [
+    rml:reference "locatorDesignator" ;
+  ] ;
+.
+
+:Address_postCode a rr:PredicateObjectMap ;
+  rr:predicate locn:postCode ;
+  rr:objectMap [
+    rml:reference "postCode" ;
+  ] ;
+.
+
+:Address_postName a rr:PredicateObjectMap ;
+  rr:predicate locn:postName ;
+  rr:objectMap [
+    rml:reference "postName" ;
+  ] ;
+.
+
+:Address_thoroughfare a rr:PredicateObjectMap ;
+  rr:predicate locn:thoroughfare ;
+  rr:objectMap [
+    rml:reference "thoroughfare" ;
+  ] ;
+.

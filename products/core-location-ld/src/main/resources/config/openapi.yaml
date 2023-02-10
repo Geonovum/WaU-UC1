@@ -1,0 +1,67 @@
+openapi: 3.0.3
+
+info:
+  title: Adres Linked data
+  version: 1.0.0
+
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+        errorCode:
+          type: string
+  parameters:
+    addressID:
+      name: addressID
+      in: path
+      required: true
+      schema:
+        type: string
+
+paths:
+
+  /id/address/{addressID}:
+    get:
+      parameters:
+        - $ref: '#/components/parameters/addressID'
+      responses:
+        303:
+          description: "300 response"
+          headers:
+            Location:
+              schema:
+                type: string
+                x-dws-expr: "`${env.dotwebstack.baseUrl}/doc/address/${args.addressID}`"
+
+  /doc/address/{addressID}:
+    get:
+      x-dws-query:
+        field: address
+        selectionSet: |
+          {
+            addressID
+            fullAddress
+            locatorDesignator
+            postCode
+            postName
+            thoroughfare
+          }
+      x-dws-rml-mapping:
+        - coreLocation.rml.ttl
+      parameters:
+        - $ref: '#/components/parameters/addressID'
+      responses:
+        200:
+          description: OK
+          content:
+            text/turtle:
+              x-dws-default: true
+            application/ld+json: {}
+            text/n3: {}
+            application/n-quads: {}
+            application/n-triples: {}
+            application/rdf+xml: {}
+            application/trig: {}
