@@ -168,6 +168,7 @@ components:
         - straatnaam
         - plaatsnaam
         - isHoofdadres
+        - omschrijving
         - _links
       properties:
         identificatie:
@@ -184,6 +185,8 @@ components:
           type: string
         isHoofdadres:
           type: boolean
+        omschrijving:
+          type: string
         _links:
           x-dws-envelope: true
           type: object
