@@ -21,6 +21,8 @@ dotwebstack:
     namespacePrefixes:
       adr: http://modellen.geostandaarden.nl/def/adres#
       nen3610: http://modellen.geostandaarden.nl/def/nen3610#
+      prov: http://www.w3.org/ns/prov#
+      bag: http://bag.basisregistraties.overheid.nl/def/bag#
   orchestrate:
     root: proxy
     subschemas:

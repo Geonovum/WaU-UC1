@@ -1,0 +1,139 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+
+@prefix adr: <http://modellen.geostandaarden.nl/def/adres#> .
+@prefix bag: <http://bag.basisregistraties.overheid.nl/def/bag#> .
+
+@prefix : <http://mappings.geostandaarden.nl/adres/id/mapping/> .
+
+:StatementWithLineageLogicalSource
+  rml:source "" ;
+  rml:referenceFormulation ql:JSONPath ;
+  rml:iterator "$.hasLineage.orchestratedProperties[*]" ;
+.
+
+:StatementWithLineage a rr:TriplesMap ;
+  rml:logicalSource :StatementWithLineageLogicalSource ;
+  rr:subjectMap [
+    rr:template "{property}-{value}" ;
+    rr:class rdf:Statement, adr:GeorkestreerdGegeven, prov:Entity ;
+    rr:termType rr:BlankNode ;
+  ] ;
+  rr:predicateObjectMap
+    :StatementWithLineage_subject ,
+    :StatementWithLineage_predicate ,
+    :StatementWithLineage_object ,
+    :StatementWithLineage_isDerivedFrom ;
+.
+
+:StatementWithLineage_subject a rr:PredicateObjectMap ;
+  rr:predicate rdf:subject ;
+  rr:objectMap [
+    rr:template "https://wau.ldproxy.net/ld/id/adres/{subject.objectKey}"
+  ] ;
+.
+
+:StatementWithLineage_predicate a rr:PredicateObjectMap ;
+  rr:predicate rdf:predicate ;
+  rr:objectMap [
+    rr:template "http://modellen.geostandaarden.nl/def/adres#{property}"
+  ] ;
+.
+
+:StatementWithLineage_object a rr:PredicateObjectMap ;
+  rr:predicate rdf:object ;
+  rr:objectMap [
+    rml:reference "value.stringValue" ;
+  ] ;
+  rr:objectMap [
+    rml:reference "value.integerValue" ;
+    rr:datatype xsd:integer ;
+  ] ;
+  rr:objectMap [
+    rml:reference "value.booleanValue" ;
+    rr:datatype xsd:boolean ;
+  ] ;
+.
+
+:StatementWithLineage_isDerivedFrom a rr:PredicateObjectMap ;
+  rr:predicate prov:wasDerivedFrom ;
+  rr:objectMap [
+    rr:parentTriplesMap :SourceStatement ;
+    rr:joinCondition [
+      rr:child "isDerivedFrom.[*]" ;
+      rr:parent "@" ;
+    ]
+  ]
+.
+
+:SourceStatementLogicalSource
+  rml:source "" ;
+  rml:referenceFormulation ql:JSONPath ;
+  rml:iterator "$.hasLineage.orchestratedProperties[*].isDerivedFrom.[*]" ;
+.
+
+:SourceStatement a rr:TriplesMap ;
+  rml:logicalSource :SourceStatementLogicalSource ;
+  rr:subjectMap [
+    rr:template "{subject.objectKey}-{property}-{value}" ;
+    rr:termType rr:BlankNode ;
+    rr:class rdf:Statement, adr:GeorkestreerdGegeven ;
+  ] ;
+  rr:predicateObjectMap
+    # :StatementWithLineage_subject ,
+    :SourceStatement_subject ,
+    :StatementWithLineage_predicate ,
+    :StatementWithLineage_object ,
+    :SourceStatement_propertyPath ;
+.
+
+:SourceStatement_propertyPath
+  rr:predicate adr:propertyPath ;
+  rr:objectMap [
+    rml:reference "propertyPath" ;
+  ] ;
+.
+
+:SourceStatement_subject
+  rr:predicate rdf:subject ;
+  rr:objectMap [
+    rr:parentTriplesMap :SourceSubject ;
+    rr:joinCondition [
+      rr:child "subject.objectKey" ;
+      rr:parent "objectKey" ;
+    ]
+  ] ;
+.
+
+:SourceSubjecLogicalSource
+  rml:source "" ;
+  rml:referenceFormulation ql:JSONPath ;
+  rml:iterator "$.hasLineage.orchestratedProperties[*].isDerivedFrom.[*].subject" ;
+.
+
+:SourceSubject a rr:TriplesMap ;
+  rml:logicalSource :SourceSubjecLogicalSource ;
+  rr:subjectMap [
+    rr:template "{objectType}-{objectKey}" ;
+    rr:termType rr:BlankNode ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdf:type ;
+    rr:objectMap [
+      rr:template "http://bag.basisregistraties.overheid.nl/def/bag#{objectType}" ;
+    ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate bag:identificatie ;
+    rr:objectMap [
+      rml:reference "objectKey" ;
+    ] ;
+  ] ;
+.

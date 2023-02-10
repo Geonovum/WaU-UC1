@@ -49,9 +49,37 @@ paths:
             plaatsnaam
             isHoofdadres
             omschrijving
+            hasLineage {
+              orchestratedProperties {
+                subject {
+                  objectKey
+                  objectType
+                }
+                property
+                value {
+                  stringValue
+                  booleanValue
+                  integerValue
+                }
+                isDerivedFrom {
+                  subject {
+                    objectType
+                    objectKey
+                  }
+                  property
+                  propertyPath
+                  value {
+                    stringValue
+                    booleanValue
+                    integerValue
+                  }
+                }
+              }
+            }
           }
       x-dws-rml-mapping:
         - adres.rml.ttl
+        - lineage.rml.ttl
       parameters:
         - $ref: '#/components/parameters/identificatie'
       responses:

@@ -1,3 +1,5 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
@@ -7,6 +9,7 @@
 @prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
 
 @prefix adr: <http://modellen.geostandaarden.nl/def/adres#> .
+@prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#> .
 
 @prefix : <http://mappings.geostandaarden.nl/adres/id/mapping/> .
 
@@ -29,7 +32,8 @@
     :Adres_straatnaam ,
     :Adres_plaatsnaam ,
     :Adres_isHoofdadres ,
-    :Adres_omschrijving ;
+    :Adres_omschrijving ,
+    :Adres_registratiegegevens ;
 .
 
 :Adres_identificatie a rr:PredicateObjectMap ;
@@ -81,4 +85,30 @@
   rr:objectMap [
     rml:reference "omschrijving" ;
   ] ;
+.
+
+:Adres_registratiegegevens a rr:PredicateObjectMap ;
+  rr:predicate nen3610:registratiegegevens ;
+  rr:objectMap [
+    rr:parentTriplesMap :Registratiegegevens ;
+  ] ;
+.
+
+:Registratiegegevens a rr:TriplesMap ;
+  rml:logicalSource :LogicalSource ;
+  rr:subjectMap [
+    rr:template "registratiegegevens-{identificatie}" ;
+    rr:class nen3610:Registratiegegevens, prov:Entity ;
+  ] ;
+  rr:predicateObjectMap
+    [
+      rr:predicate dcterms:hasPart ;
+      rr:objectMap [
+        rr:parentTriplesMap :StatementWithLineage ;
+        rr:joinCondition [
+          rr:child "hasLineage.orchestratedProperties.[*]" ;
+          rr:parent "@" ;
+        ] ;
+      ] ;
+    ] ;
 .
